@@ -1,0 +1,38 @@
+[project]
+name = "mcp-advanced-topics"
+version = "0.1.0"
+description = "Parallel exercises for Anthropic Academy's MCP: Advanced Topics course"
+requires-python = ">=3.14"
+dependencies = [
+    "aioconsole>=0.8.1",
+    "anthropic>=1.13.0",
+    "mcp[cli]>=1.9.3,<2",
+    "prompt-toolkit>=3.0.51",
+    "pyboxen>=1.3.0",
+    "pydantic>=2",
+    "python-dotenv>=1.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["chat_tools.py", "models.py"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "SIM", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# handle_event is defined inside a `while True:` and captures tool_calls by closure, triggering B023.
+# Verified safe: on_event is consumed synchronously within the same iteration via chat.py -> claude.py:chat_stream
+# and never stored as an attribute, so each iteration's closure never outlives its tool_calls.
+"3_roots/core/cli.py" = ["B023"]
