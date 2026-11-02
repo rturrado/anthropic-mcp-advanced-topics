@@ -27,3 +27,4 @@ Once it runs out, requests fail with `429` until you top up or enable billing on
 1.  **Sampling** — the MCP server asks the client to invoke the LLM (reverses the usual flow).
 2.  **Notifications** — the MCP server pushes updates to the client (progress reports for long-running work).
 3.  **Roots** — the client exposes a set of filesystem roots the server is allowed to inspect; includes a video conversion tool as a worked example.
+4.  **Transport over HTTP** — the server runs as a `streamable-http` HTTP server, and the client is a browser page (`index.html`) talking to it directly.
