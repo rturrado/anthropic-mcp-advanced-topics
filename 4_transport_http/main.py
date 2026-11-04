@@ -20,12 +20,12 @@ mcp = FastMCP(
     name="HTTP Transport Demo",
     # stateless_http=True,
     # json_response=True,
-
+    #
     # Match the trailing slash the browser client (`index.html`) uses,
     # so requests to `/mcp/` land here directly instead of hitting a 307 redirect from Starlette's `redirect_slashes`
     # — browsers do not follow redirects on CORS preflights.
     streamable_http_path="/mcp/",
-
+    #
     # Bind to `localhost` so uvicorn advertises `http://localhost:8000` on startup,
     # matching the hardcoded origin in `index.html`.
     # If uvicorn said `127.0.0.1` instead,
