@@ -10,7 +10,7 @@ One folder per demo at the project root, all sharing the same dependencies.
 2.  `cp .env.example .env`
 3.  Edit `.env` and set your real `ANTHROPIC_API_KEY`. See [Getting the key](#getting-the-key) for details.
 
-The `3_roots` demo also requires FFmpeg on your PATH for the video conversion tool
+The `3-roots` demo also requires FFmpeg on your PATH for the video conversion tool
 (`brew install ffmpeg` on macOS, `apt install ffmpeg` on Debian/Ubuntu).
 
 ### Getting the key

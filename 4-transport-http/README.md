@@ -57,7 +57,7 @@ Walkthrough of the key moments:
 See the project root `README.md` for setup. From there:
 
 ```
-cd 4_transport_http
+cd 4-transport-http
 uv run main.py
 ```
 

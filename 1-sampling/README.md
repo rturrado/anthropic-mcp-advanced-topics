@@ -47,6 +47,6 @@ Walkthrough of the key moments:
 See the project root `README.md` for setup. From there:
 
 ```
-cd 1_sampling
+cd 1-sampling
 uv run client.py
 ```

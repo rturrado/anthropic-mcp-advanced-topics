@@ -68,7 +68,7 @@ See the project root `README.md` for setup. You also need FFmpeg
 Run from this folder, passing one or more root directories as arguments:
 
 ```
-cd 3_roots
+cd 3-roots
 uv run main.py res
 ```
 

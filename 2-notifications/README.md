@@ -48,6 +48,6 @@ Walkthrough of the key moments:
 See the project root `README.md` for setup. From there:
 
 ```
-cd 2_notifications
+cd 2-notifications
 uv run client.py
 ```

@@ -35,4 +35,4 @@ select = ["B", "E", "F", "I", "SIM", "UP"]
 # handle_event is defined inside a `while True:` and captures tool_calls by closure, triggering B023.
 # Verified safe: on_event is consumed synchronously within the same iteration via chat.py -> claude.py:chat_stream
 # and never stored as an attribute, so each iteration's closure never outlives its tool_calls.
-"3_roots/core/cli.py" = ["B023"]
+"3-roots/core/cli.py" = ["B023"]
