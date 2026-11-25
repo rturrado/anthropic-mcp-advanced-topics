@@ -65,9 +65,7 @@ class MCPClient:
 
     def session(self) -> ClientSession:
         if self._session is None:
-            raise ConnectionError(
-                "Client session not initialized or cache not populated. Call connect_to_server first."
-            )
+            raise ConnectionError("client session not initialized or cache not populated; call connect_to_server first")
         return self._session
 
     async def list_tools(self) -> list[types.Tool]:

@@ -28,7 +28,7 @@ async def summarize(text_to_summarize: str, ctx: Context):
     if result.content.type == "text":
         return result.content.text
     else:
-        raise ValueError("Sampling failed")
+        raise ValueError("sampling failed")
 
 
 if __name__ == "__main__":

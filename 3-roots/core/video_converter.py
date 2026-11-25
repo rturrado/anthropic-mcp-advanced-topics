@@ -27,10 +27,10 @@ class VideoConverter:
         input_file = Path(input_path)
 
         if not input_file.exists():
-            raise ValueError(f"Input file not found: {input_path}")
+            raise ValueError(f"input file not found: {input_path}")
 
         if not input_path.lower().endswith(".mp4"):
-            raise ValueError("Input file must be an MP4 file")
+            raise ValueError("input file must be an MP4 file")
 
         return input_file
 
@@ -69,7 +69,7 @@ class VideoConverter:
                 ]
             )
         else:
-            raise ValueError(f"Unsupported output format: {format}")
+            raise ValueError(f"unsupported output format: {format}")
 
         return cmd
 
@@ -101,4 +101,4 @@ class VideoConverter:
             return f"Successfully converted {input_path} to {output_path}"
 
         except FileNotFoundError as err:
-            raise RuntimeError("FFmpeg not found. Please ensure ffmpeg is installed and in PATH") from err
+            raise RuntimeError("FFmpeg not found; make sure ffmpeg is installed and in PATH") from err

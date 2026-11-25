@@ -48,7 +48,7 @@ async def convert_video(
 
     # Ensure the input file is contained in a root
     if not await is_path_allowed(input_file, ctx):
-        raise ValueError(f"Access to path is not allowed: {input_path}")
+        raise ValueError(f"access to path is not allowed: {input_path}")
 
     return await VideoConverter.convert(input_path, format)
 
@@ -75,7 +75,7 @@ async def read_dir(
     requested_path = Path(path).resolve()
 
     if not await is_path_allowed(requested_path, ctx):
-        raise ValueError("Error: can only read directories within a root")
+        raise ValueError("can only read directories within a root")
 
     return [entry.name for entry in requested_path.iterdir()]
 
